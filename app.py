@@ -2,7 +2,6 @@ from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
 from flask_migrate import Migrate
-from sqlalchemy.ext.declarative import api
 from models.db import db
 from models.user import User
 from models.post import Post
@@ -15,7 +14,7 @@ CORS(app, supports_credentials=True)
 api = Api(app)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/flask_recipebook"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/flask_myrecipebook"
 app.config['SQLALCHEMY_ECHO'] = True
 
 db.init_app(app)
