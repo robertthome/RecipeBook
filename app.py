@@ -15,7 +15,15 @@ CORS(app, supports_credentials=True)
 api = Api(app)
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/flask_finstagram"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost:5432/flask_recipebook"
 app.config['SQLALCHEMY_ECHO'] = True
+
+db.init_app(app)
+migrate = Migrate(app, db)
+
+api.add_resource(Users, '/users')
+api.add_resource(Posts, '/posts')
+api.add_resource(PostDetails, '/posts/<int:post_id>')
+api.add_resource(UserDetail, '/users/<int:user_id>')
 
 app.run
