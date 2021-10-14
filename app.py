@@ -26,4 +26,5 @@ api.add_resource(Posts, '/posts')
 api.add_resource(PostDetails, '/posts/<int:post_id>')
 api.add_resource(UserDetail, '/users/<int:user_id>')
 
-app.run
+if __name__ == '__main__':
+    app.run(debug=True)
