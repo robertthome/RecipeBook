@@ -4,7 +4,7 @@
       <FeedForm :user="user" @getPosts="getPosts"/>
     </div>
     <div class="scroll-feed">
-      <FeedCard v-for="post in posts" :key="post.id" :caption="post.caption" :image="post.image" :likes="post.likes" :post_username="post.username" :user="user" :getUserData='getUserData' :post_id="post.id" @getPosts="getPosts"/>
+      <FeedCard v-for="post in posts" :key="post.id" :caption="post.caption" :image="post.image" :post_username="post.username" :user="user" :getUserData='getUserData' :post_id="post.id" @getPosts="getPosts"/>
     </div>
   </div>
 </template>
