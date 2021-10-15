@@ -4,7 +4,7 @@
       <img :src="image"/>
     </div>
     <div class="card_caption">
-      <p class="user_name">{{post_username}}:</p>
+      <p class="user_name"><b>By Chef: </b>{{post_username}}</p>
       <p class="caption">{{caption}}</p>
       <button class="del_btn" @click="deletePost(post_id)">Delete Post</button>
     </div>
@@ -66,12 +66,12 @@ export default {
 }
 
 
-.likes {
-  margin-top: 0em;
-}
-
 .user_name, .caption {
   margin-left: 5px;
+}
+
+.caption {
+  white-space: pre-wrap;
 }
 
 .del_btn {

@@ -1,13 +1,13 @@
 <template>
     <div class='feed_form'>
         <form @submit.prevent="handleSubmit" class="feed_form_form">
-            <input 
+            <textarea 
             name="caption"
             type="text"
             :value="caption"
-            placeholder="Enter Caption"
+            placeholder="Name of Dish followed by ingredients and directions"
             @input="handleForm"
-            class="feed_form_input"
+            class="feed_form_input info"
             />
         <input
             name="image"
@@ -15,7 +15,7 @@
             :value="image"
             placeholder="Enter Image"
             @input="handleForm"
-            class="feed_form_input"
+            class="feed_form_input img"
             />
             <button type="submit" class="feed_form_button">
             Blog
@@ -54,5 +54,8 @@ export default {
 </script>
 
 <style>
-
+ .feed_form {
+        white-space: pre-wrap;
+    }
 </style>
+
