@@ -4,8 +4,8 @@
       <img :src="image"/>
     </div>
     <div class="card_caption">
-      <p class="user_name"><b>By Chef: </b>{{post_username}}</p>
       <p class="caption">{{caption}}</p>
+      <p class="user_name"><b>By Chef: </b>{{post_username}}</p>
       <button class="del_btn" @click="deletePost(post_id)">Delete Post</button>
     </div>
   </div>

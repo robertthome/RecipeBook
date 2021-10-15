@@ -1,10 +1,14 @@
 <template>
   <div class="feed">
+
+    <div class="scroll-feed">
+      <FeedCard v-for="post in posts" :key="post.id" :caption="post.caption" :image="post.image" :post_username="post.username" :user="user" :getUserData='getUserData' :post_id="post.id" @getPosts="getPosts"/>
+    </div>
     <div class="feed_form">
       <FeedForm :user="user" @getPosts="getPosts"/>
     </div>
-    <div class="scroll-feed">
-      <FeedCard v-for="post in posts" :key="post.id" :caption="post.caption" :image="post.image" :post_username="post.username" :user="user" :getUserData='getUserData' :post_id="post.id" @getPosts="getPosts"/>
+    <div>
+      
     </div>
   </div>
 </template>
@@ -52,7 +56,7 @@ export default {
 </script>
 <style>
 .feed {
-  display: flex;
+  
   margin-top: 60px;
 }
 .feed_form {

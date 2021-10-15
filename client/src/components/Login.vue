@@ -47,7 +47,7 @@ export default {
 
     },
     logfToFeed() {
-      this.$router.push('feed')
+      this.$router.push('/feed')
     }
   }
 }
@@ -69,13 +69,8 @@ export default {
   border-radius: 6px;
   border: 2px solid;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(45deg,
-        rgb(255, 253, 135),
-        rgb(201, 199, 110), 
-        rgb(219, 167, 248),
-        rgb(197, 90, 255), 
-        rgb(166, 0, 255)
-  );
+  background: white;
+  
 }
 
 .content-wrapper,
@@ -94,7 +89,7 @@ button {
   margin-right: 1em;
   padding: 0.6em 1.2em;
   background-color: white;
-  color: rgb(219, 167, 248);
+  color: rgb(0, 0, 0);
   border: 0;
   border-radius: 6px;
   font-weight: 600;
@@ -107,11 +102,11 @@ button {
 }
 
 .success {
-  border-color: rgb(219, 167, 248);;
+  border-color: rgb(0, 0, 0);;
 }
 
 input {
-  border: 2px solid #757575;
+  border: 2px solid #000000;
   outline: none;
 }
 
@@ -136,6 +131,6 @@ h4 {
   color: #a5d6a7;
 }
 .red {
-  color: #e57373;
+  color: #000000;
 }
 </style>

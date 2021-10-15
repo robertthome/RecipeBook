@@ -38,6 +38,7 @@ export default {
   }),
   methods: {
     navigateItem(id) {
+      console.log(id, "navigate item test")
       this.$router.push(`/recipes/${id}`)
     }
   }

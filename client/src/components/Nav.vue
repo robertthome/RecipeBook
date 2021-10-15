@@ -2,6 +2,7 @@
   <header class="title">
     <h3 class="user">{{ username }}</h3>
     <button @click="logOut" >Log Out</button>
+    <!-- <router-link to="gethere">HILLO</router-link> -->
   </header>
 </template>
 
@@ -29,14 +30,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: linear-gradient(45deg,
-        rgb(255, 253, 135),
-        rgb(201, 199, 110), 
-        rgb(219, 167, 248),
-        rgb(197, 90, 255), 
-        rgb(166, 0, 255)
-  );
-
+  background: white;
   height: 4em;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
@@ -51,8 +45,8 @@ button {
   margin-right: 1em;
   padding: 0.6em 1.2em;
   background-color: white;
-  color: rgb(219, 167, 248);
-  border: 0;
+  color: black;
+  border: black solid 1;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
@@ -64,6 +58,6 @@ button:hover {
 }
 
 .user{
-  color: rgb(166, 0, 255)
+  color: rgb(7, 6, 7)
 }
 </style>
