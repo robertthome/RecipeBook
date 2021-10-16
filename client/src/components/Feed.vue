@@ -65,9 +65,9 @@ export default {
   margin-top: 10px;
 }
 .scroll-feed {
-  flex: 1;
+  /* flex: 1;
   overflow-y: scroll;
-  height: 100vh;
+  height: 100vh; */
 }
 .item-view {
   padding: 1em;

@@ -44,13 +44,14 @@ export default {
 
 
 .feed_card {
-  border: 1px solid;
+  display: flex;
+  /* border: 1px solid;
   border-radius: 8px;
   max-width: 50vw;
   margin: 1em auto;
   cursor: pointer;
   box-shadow: 7px 10px 24px 0px rgba(0, 0, 0, 0.39);
-  transition: all .2s ease;
+  transition: all .2s ease; */
 }
 
 .feed_card:hover{
