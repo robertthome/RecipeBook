@@ -2,10 +2,7 @@
   <div id="app">
     <div class="nav_bar" v-if="user">
       <Nav :username="user.username" @clearUser="clearUser"/>
-      <main>
-      <router-view></router-view>
-
-      </main>
+      
     </div>
     <Login 
       v-if="!user"
@@ -16,13 +13,11 @@
       :isError="isError"
     />
     <Feed v-else :user="user" @clearUser="clearUser"/>
-    <Recipes  />
   </div>
 </template>
 
 <script>
 import Login from './components/Login.vue'
-import Recipes from './components/Recipes.vue'
 import Feed from './components/Feed.vue'
 import Nav from './components/Nav.vue'
 
@@ -34,7 +29,6 @@ export default {
   components: {
     Login,
     Feed,
-    Recipes,
     Nav
   },
   data: () => ({

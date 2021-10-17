@@ -21,6 +21,7 @@
             submit
             </button>
         </form>
+        <h2>ADD YOUR OWN RECIPE</h2>
     </div>
 </template>
 
@@ -54,8 +55,17 @@ export default {
 </script>
 
 <style>
- .feed_form {
-        white-space: pre-wrap;
+.feed_form_input {
+        display: flex;
+        border: black solid 2px;
+        /* margin: 5px 5px; */
+        margin-top: 10px;
+    }
+
+.feed_form_button {
+        margin-top: 10px;
+
     }
 </style>
+
 

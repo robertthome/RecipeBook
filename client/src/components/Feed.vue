@@ -1,14 +1,16 @@
 <template>
   <div class="feed">
-
-    <div class="scroll-feed">
-      <FeedCard v-for="post in posts" :key="post.id" :caption="post.caption" :image="post.image" :post_username="post.username" :user="user" :getUserData='getUserData' :post_id="post.id" @getPosts="getPosts"/>
+    <div class="recipes">
+      <Recipes />
     </div>
     <div class="feed_form">
       <FeedForm :user="user" @getPosts="getPosts"/>
     </div>
+    <div class="scroll-feed">
+      <FeedCard v-for="post in posts" :key="post.id" :caption="post.caption" :image="post.image" :post_username="post.username" :user="user" :getUserData='getUserData' :post_id="post.id" @getPosts="getPosts"/>
+    </div>
     <div>
-      
+
     </div>
   </div>
 </template>
@@ -18,13 +20,15 @@ import {GetPosts} from '../services/posts'
 import {FindUserById} from '../services/users'
 import FeedCard from './FeedCard.vue'
 import FeedForm from './FeedForm.vue'
+import Recipes from './Recipes.vue'
 
 
 export default {
   name: 'Feed',
   components: {
     FeedCard,
-    FeedForm
+    FeedForm,
+    Recipes
   },
   props: ['user'],
 
@@ -55,19 +59,31 @@ export default {
 }
 </script>
 <style>
+.recipes {
+  margin-top: 10em;
+}
+
 .feed {
-  
-  margin-top: 60px;
+  padding: 1em;
+  display: grid;
+  gap: 1em; 
+  justify-content: center;
 }
 .feed_form {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  margin-left: 30em;
+  position: sticky;
+  top: 4rem;
 }
 .scroll-feed {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 25em);
+  
+  justify-content: center;
+  margin-right: 40em; 
   /* flex: 1;
-  overflow-y: scroll;
-  height: 100vh; */
+  overflow-y: scroll; */
+  /* height: 100vh; */
 }
 .item-view {
   padding: 1em;

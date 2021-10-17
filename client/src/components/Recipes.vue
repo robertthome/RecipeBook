@@ -1,13 +1,12 @@
 <template>
   <div>
-
     <h2 class="listing-header">{{ header }}</h2>
     <section class="listings">
       <div
         class="card col"
         :key="recipe.id"
         v-for="recipe in recipes"
-        @click="navigateItem(recipe.id)"
+        @click="navigatItem(recipe.id)"
       >
         <div class="image-wrapper">
           <img :src="recipe.imageURL" />
@@ -20,6 +19,10 @@
 
         <hr class="rounded" />
         <div class="details row">
+            <StarRating  v-bind:increment="0.5"
+              v-bind:max-rating="5"
+              inactive-color="#000"
+              active-color="#f00"/>
         </div>
       </div>
     </section>
@@ -28,8 +31,13 @@
 
 <script>
 import recipes from '../data.json' 
+import StarRating from 'vue-star-rating'
+
 export default {
   name: 'Recipes',
+  components: {
+    StarRating
+  },
   props: {
     header: String
   },
@@ -39,7 +47,7 @@ export default {
   methods: {
     navigateItem(id) {
       console.log(id, "navigate item test")
-      this.$router.push(`/recipes/${id}`)
+      this.$router.push(`/recipe/${id}`)
     }
   }
 }
@@ -93,7 +101,7 @@ export default {
     width:  100%;
     height: 20em;
     object-fit: cover;
-  border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
 }
 
 .card .details {

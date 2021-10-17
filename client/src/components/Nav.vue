@@ -2,7 +2,7 @@
   <header class="title">
     <h3 class="user">{{ username }}</h3>
     <button @click="logOut" >Log Out</button>
-    <!-- <router-link to="gethere">HILLO</router-link> -->
+    
   </header>
 </template>
 
@@ -33,7 +33,7 @@ export default {
   background: white;
   height: 4em;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  position: fixed;
+  position: static;
   z-index: 1000;
 }
 

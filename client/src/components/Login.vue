@@ -47,7 +47,7 @@ export default {
 
     },
     logfToFeed() {
-      this.$router.push('/feed')
+      // this.$router.push('/feed')
     }
   }
 }
