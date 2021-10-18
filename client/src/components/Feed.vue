@@ -78,6 +78,8 @@ export default {
 }
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
 
 .header {
   color: black;
@@ -86,6 +88,7 @@ export default {
   margin-left: 5em;
   padding: 5em;
   background-image: url();
+  font-family: 'Libre Baskerville', serif;
 }
 
 b {
@@ -101,6 +104,7 @@ b {
   justify-content: center;
   font-size: 5em;
   color: black;
+  font-family: 'Libre Baskerville', serif;
 }
 
 .feed {

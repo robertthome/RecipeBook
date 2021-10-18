@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
 .h1 {
   margin-bottom: 50px;
 }
@@ -63,7 +63,7 @@ export default {
 .dish {
   color: black;
   font-size: 32px;
-  
+  font-family: 'Libre Baskerville', serif;
 }
 
 .article-img {
