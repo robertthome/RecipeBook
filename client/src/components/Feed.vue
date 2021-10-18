@@ -17,7 +17,16 @@
       <FeedCard v-for="post in posts" :key="post.id" :caption="post.caption" :image="post.image" :post_username="post.username" :user="user" :getUserData='getUserData' :post_id="post.id" @getPosts="getPosts"/>
     </div>
     <div>
+      <ArticleCard v-for="article in articles" :key="article.id" :caption="post.caption" :image="post.image" :post_username="post.username" :user="user" :getUserData='getUserData' :article_id="article.id" @getArticles="getArticles"/>
+    </div>
+    <div>
+      <ArticleForm :user="user" @getArticles="getArticles"/>
+    </div>
+    <div>
 
+    </div>
+    <div class="event">
+      
     </div>
   </div>
 </template>
@@ -25,9 +34,14 @@
 
 import {GetPosts} from '../services/posts'
 import {FindUserById} from '../services/users'
+import {GetArticles} from '../services/articles'
 import FeedCard from './FeedCard.vue'
 import FeedForm from './FeedForm.vue'
 import Recipes from './Recipes.vue'
+import ArticleCard from './ArticleCard.vue'
+import ArticleForm from './ArticleForm.vue'
+
+
 
 
 export default {
@@ -35,12 +49,15 @@ export default {
   components: {
     FeedCard,
     FeedForm,
-    Recipes
+    Recipes,
+    ArticleCard,
+    ArticleForm
   },
   props: ['user'],
 
   data: () => ({
     posts: [],
+    articles: [],
     error: null
   }),
   mounted: function () {
@@ -56,12 +73,21 @@ export default {
         this.error = error
       }
     },
+    async GetArticles() {
+      try {
+        const res = await GetArticles()
+        this.articles = (res)
+      } catch (error) {
+        console.log(error)
+        this.error = error
+      }
+    },
     async getUserData(id) {
       const res = await FindUserById(id)
       console.log('getUserData', res.username)
       return res.username
     }
-
+    
   }
 }
 </script>

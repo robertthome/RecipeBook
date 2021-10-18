@@ -6,6 +6,8 @@ from flask_migrate import Migrate
 from models.db import db
 from models.user import User
 from models.post import Post
+from models.article import Article
+from resources.article import Articles, ArticleDetails
 from resources.user import Users, UserDetail
 from resources.post import Posts, PostDetails
 
@@ -37,8 +39,10 @@ migrate = Migrate(app, db)
 
 api.add_resource(Users, '/users')
 api.add_resource(Posts, '/posts')
+api.add_resource(Articles, '/articles')
 api.add_resource(PostDetails, '/posts/<int:post_id>')
 api.add_resource(UserDetail, '/users/<int:user_id>')
+api.add_resource(ArticleDetails, '/articles/<int:article_id>')
 
 if __name__ == '__main__':
     app.run()

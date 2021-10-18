@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "vue-star-rating": "^2.1.0"
+  }
+}
