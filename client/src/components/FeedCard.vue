@@ -54,6 +54,7 @@ export default {
 
 .feed_card {
   color: black;
+  background-color: rgb(255, 255, 255);
   border: 1px solid;
   border-radius: 8px;
   max-width: 25vw;
