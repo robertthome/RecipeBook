@@ -59,7 +59,7 @@ export default {
 
 <style>
 body{
-  background: whitesmoke;
+  background: rgb(225, 161, 161);
 }
 .nav_bar{
   position: fixed;

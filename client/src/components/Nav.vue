@@ -1,6 +1,6 @@
 <template>
   <header class="title">
-    <h3 class="user">{{ username }}</h3>
+    <h3 class="user"><i>Logged in as:</i> {{ username }}</h3>
     <button @click="logOut" >Log Out</button>
     
   </header>

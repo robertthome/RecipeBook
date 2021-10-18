@@ -19,10 +19,7 @@
 
         <hr class="rounded" />
         <div class="details row">
-            <StarRating  v-bind:increment="0.5"
-              v-bind:max-rating="5"
-              inactive-color="#000"
-              active-color="#f00"/>
+            
         </div>
       </div>
     </section>
@@ -31,13 +28,10 @@
 
 <script>
 import recipes from '../data.json' 
-import StarRating from 'vue-star-rating'
+
 
 export default {
   name: 'Recipes',
-  components: {
-    StarRating
-  },
   props: {
     header: String
   },

@@ -1,7 +1,14 @@
 <template>
   <div class="feed">
+    <div class="header">
+    <h1 ><b>R</b>ECIPE BOOK</h1>
+    <h3 class="description"><b>E</b>xplore, <b>F</b>ind, And <b>C</b>reate Beatiful Recipes To Share With The World</h3>
+    </div>
     <div class="recipes">
       <Recipes />
+    </div>
+    <div>
+      <h1 class="create">Create Your Own Recipes</h1>
     </div>
     <div class="feed_form">
       <FeedForm :user="user" @getPosts="getPosts"/>
@@ -59,8 +66,29 @@ export default {
 }
 </script>
 <style>
+.header {
+  color: black;
+  font-size: 2em;
+  margin-top: 5em;
+  margin-left: 5em;
+  padding: 5em;
+  background-image: url();
+}
+
+b {
+  color: red;
+}
+
 .recipes {
   margin-top: 10em;
+}
+
+.create {
+  display: flex;
+  justify-content: center;
+  font-size: 5em;
+  color:black;
+
 }
 
 .feed {
