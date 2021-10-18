@@ -6,10 +6,14 @@
     <div class="card_caption">
       <p class="caption">{{caption}}</p>
       <p class="user_name"><b>By Chef: </b>{{post_username}}</p>
+      <div class="rating">
+
       <StarRating  v-bind:increment="0.5"
-              v-bind:max-rating="5"
+              v-bind:max-rating="4"
               inactive-color="#000"
+              star-size="30"
               active-color="#f00"/>
+      </div>
       <button class="del_btn" @click="deletePost(post_id)">Delete Post</button>
     </div>
   </div>
@@ -57,16 +61,14 @@ export default {
   background-color: rgb(255, 255, 255);
   border: 1px solid;
   border-radius: 8px;
-  max-width: 25vw;
+  max-width: 16em;
   margin: 1em auto;
   cursor: pointer;
   box-shadow: 7px 10px 24px 0px rgba(0, 0, 0, 0.39);
   transition: all .2s ease;
 }
 
-.feed_card:hover{
-  opacity: .8;
-}
+
 
 .card_image img{
   width:  100%;
@@ -76,6 +78,8 @@ export default {
   /* border-radius: 50%; */
 }
 
+
+ 
 
 .user_name, .caption {
   margin-left: 5px;

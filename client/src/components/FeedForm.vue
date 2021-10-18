@@ -50,11 +50,17 @@ export default {
             this.$emit('getPosts')
             return feedData   
         }
+        
     }
 }
 </script>
 
 <style>
+
+.feed_form {
+    position: sticky;
+}
+
 .feed_form_input {
         display: flex;
         border: black solid 2px;

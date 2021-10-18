@@ -1,5 +1,4 @@
 from datetime import datetime
-from models import user
 from models.db import db
 
 
@@ -11,18 +10,13 @@ class Article(db.Model):
     content = db.Column(db.String(280), nullable=False)
     created_at = db.Column(db.DateTime, nullable=False,
                            default=datetime.utcnow)
-    username = db.Column(db.String(80), db.ForeignKey(
-        'users.username'), nullable=False)
 
-    user = db.relationship('User', backref=db.backref('users', lazy=True))
-
-    def __init__(self, image, content, username):
+    def __init__(self, image, content):
         self.content = content
         self.image = image
-        self.username = username
 
     def json(self):
-        return {"id": self.id, "image": self.image, "content": self.content,  "username": self.username, "created_at": str(self.created_at)}
+        return {"id": self.id, "image": self.image, "content": self.content,  "created_at": str(self.created_at)}
 
     def create(self):
         db.session.add(self)
